@@ -1,0 +1,130 @@
+Collection Name : RecipeApp
+
+APIs : 
+
+1. Get All Recipes (GET)
+   Method: GET
+   URL: http://localhost:3000/api/recipes 
+   Request: / -> (get All)
+   Response: []
+
+2. Get Recipe by ID (GET)
+   Method: GET
+   URL: http://localhost:3000/api/recipes/:id
+   Request: /:id -> (/6)
+   Response: 
+   {
+    "_id": "69c050cf9976399c6edc42c7",
+    "id": 5,
+    "recipe": "pongal",
+    "ingredients": [
+        "rice",
+        "moong dal",
+        "pepper",
+        "salt"
+    ],
+    "cookingTime": "25 mins",
+    "completion": true,
+    "__v": 0
+   }
+
+3. Create Recipe (POST)
+   Method: POST
+   URL: http://localhost:3000/api/recipes
+   Body Type: raw → JSON
+   Request & Response:
+  [
+  {
+    "id": 1,
+    "recipe": "dosa",
+    "ingredients": ["batter", "salt"],
+    "cookingTime": "10 mins",
+    "completion": true
+  },
+  {
+    "id": 2,
+    "recipe": "idli",
+    "ingredients": ["rice batter", "salt"],
+    "cookingTime": "15 mins",
+    "completion": false
+  },
+  {
+    "id": 3,
+    "recipe": "chapati",
+    "ingredients": ["wheat flour", "water", "salt"],
+    "cookingTime": "20 mins",
+    "completion": true
+  },
+  {
+    "id": 4,
+    "recipe": "upma",
+    "ingredients": ["rava", "onion", "water", "salt"],
+    "cookingTime": "15 mins",
+    "completion": false
+  },
+  {
+    "id": 5,
+    "recipe": "pongal",
+    "ingredients": ["rice", "moong dal", "pepper", "salt"],
+    "cookingTime": "25 mins",
+    "completion": true
+  },
+  {
+    "id": 6,
+    "recipe": "lemon rice",
+    "ingredients": ["rice", "lemon", "turmeric", "salt"],
+    "cookingTime": "15 mins",
+    "completion": false
+  },
+  {
+    "id": 7,
+    "recipe": "fried rice",
+    "ingredients": ["rice", "vegetables", "soy sauce", "salt"],
+    "cookingTime": "20 mins",
+    "completion": true
+  },
+  {
+    "id": 8,
+    "recipe": "curd rice",
+    "ingredients": ["rice", "curd", "salt"],
+    "cookingTime": "10 mins",
+    "completion": false
+  },
+  {
+    "id": 9,
+    "recipe": "poha",
+    "ingredients": ["flattened rice", "onion", "peanuts", "salt"],
+    "cookingTime": "10 mins",
+    "completion": true
+  },
+  {
+    "id": 10,
+    "recipe": "vegetable curry",
+    "ingredients": ["vegetables", "spices", "oil", "salt"],
+    "cookingTime": "30 mins",
+    "completion": false
+  }
+  ]
+
+4. Update Recipe (PUT)
+   Method: PUT
+   URL: http://localhost:3000/api/recipes/:id
+   Body Type: raw → JSON
+   Request: /:id -> (/6)
+   Response & Response:
+   {
+    "id": 6,
+    "recipe": "LEMON RICE",
+    "ingredients": ["rice", "lemon", "turmeric", "salt", "spices"],
+    "cookingTime": "15 mins",
+    "completion": false
+   }
+
+5. Delete Recipe (DELETE)
+   Method: DELETE
+   URL: http://localhost:3000/api/recipes/:id
+   Request: /:id -> (/6)
+   Response: 
+   {
+    "message": "Deleted Successfully!!"
+   }
